@@ -1,0 +1,20 @@
+﻿@page "/mainpage";
+
+<h3>Exploring blazor...</h3>
+
+<ListComponent></ListComponent>
+
+<p><button class="btn btn-primary" @onclick="ClickEventHandler">Click me</button></p>
+
+<p><div><input class="form-control-sm" @onchange="@InputString" /></div></p>
+
+<p><button class="btn btn-primary" @onclick="() => NavigateToDetails()">Navigate to details method</button></p>
+
+<ErrorBoundary>
+    <ChildContent>
+      
+    </ChildContent>
+    <ErrorContent>
+    <p class="error">Error</p>        
+    </ErrorContent>
+</ErrorBoundary>
